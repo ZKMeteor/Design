@@ -58,9 +58,13 @@ h5,h4,h3,h2,h1,p,a {
 
 /* banner */
 
+@media screen and (max-width:768px) {
+    .carousel-item img{
+        height: calc(40vh - 60px);
+    }
+}
 .carousel-item img{
     height: calc(80vh - 60px);
-    position: relative;
 }
 .carousel-inner::after{
     position: absolute;
