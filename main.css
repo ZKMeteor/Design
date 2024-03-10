@@ -46,25 +46,25 @@ h5,h4,h3,h2,h1,p,a {
     line-height: 1.5;
     cursor: pointer;
 }
+.top-link  a{
+    color: #a5a4a4;
+    font-weight: 300;
+}
 @media screen and (max-width:768px) {
     .top-title h4{
         text-align: center;
     }
 }
-.top-link  a{
-    color: #a5a4a4;
-    font-weight: 300;
-}
 
 /* banner */
 
+.carousel-item img{
+    height: calc(80vh - 60px);
+}
 @media screen and (max-width:768px) {
     .carousel-item img{
         height: calc(40vh - 60px);
     }
-}
-.carousel-item img{
-    height: calc(80vh - 60px);
 }
 .carousel-inner::after{
     position: absolute;
