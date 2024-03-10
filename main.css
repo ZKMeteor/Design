@@ -1,0 +1,155 @@
+/* all */
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    background: #fffdf5;
+}
+.c-scrollbar {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+h5,h4,h3,h2,h1,p,a {
+    font-family: "Poppins", sans-serif; 
+}
+.color-g {
+    color: #a5a4a4;
+}
+.color-b {
+    color: black;
+}
+.bg {
+    background: gray;
+}
+/* nav */
+.top-fixed {
+    width: 100%;
+    position: fixed;
+    top: 0;right: 0;
+    z-index: 9999;
+    background: white;
+}
+.top-box {
+    height: 60px;
+}
+.top-title h4{
+    vertical-align: middle;
+    color: #a5a4a4;
+    font-weight: 300;
+    line-height: 1.5;
+    cursor: pointer;
+}
+@media screen and (max-width:768px) {
+    .top-title h4{
+        text-align: center;
+    }
+}
+.top-link  a{
+    color: #a5a4a4;
+    font-weight: 300;
+}
+
+/* banner */
+
+.carousel-item img{
+    height: calc(80vh - 60px);
+    position: relative;
+}
+.carousel-inner::after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(168, 168, 168, 0.2);
+}
+.carousel-inner h5 {
+    position: relative;
+    z-index: 999 !important;
+    font-weight: 400;
+    letter-spacing: 0.5em;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 0;bottom: 0;right: 0;left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    color: #fff;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    content: '';
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+.carousel-control-next-icon {
+    background-image: none;
+    color: white;
+}
+.carousel-control-prev-icon {
+    background-image: none;
+    color: white;
+}
+
+/* about */
+
+.about-title {
+    color: #a5a4a4;
+    font-weight: 400;
+}
+
+
+/* project */
+
+.proj-imgbox {
+    position: relative;
+}
+.proj-imgbox img {
+    box-shadow: 4px 4px 5px 2px gray;
+}
+.proj-imgboxtitle {
+    position: absolute;
+    z-index: 11;
+    content: '';
+    top: 0;right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #cce2e1;
+    display: none;
+    transition: 1s;
+}
+
+
+
+.project-box h5{
+    font-weight: 400;
+    text-align: center;
+    background: linear-gradient(to right, #ea5350 0%, #f5a500 50%, rgb(6, 221, 6) 100% );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.proj-imgbox:hover .proj-imgboxtitle{
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+
+/* ccontact */
+
+.contact-tel {
+    text-decoration: underline ;
+}
+.contact-tel:hover {
+    color: #cce2e1;
+}
