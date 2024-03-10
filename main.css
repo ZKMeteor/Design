@@ -77,7 +77,6 @@ h5,h4,h3,h2,h1,p,a {
     position: relative;
     z-index: 999 !important;
     font-weight: 400;
-    letter-spacing: 0.5em;
 }
 
 .carousel-caption {
