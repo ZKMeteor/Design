@@ -91,14 +91,14 @@ h5,h4,h3,h2,h1,p,a {
 /* nav */
 .top-fixed {
     width: 100%;
-    position: fixed;
+    position: relative;
     top: 0;right: 0;
     z-index: 500;
     background: white;
 }
-.top-box {
+/* .top-box {
     height: 60px;
-}
+} */
 .top-title h4{
     vertical-align: middle;
     color: #a5a4a4;
@@ -124,6 +124,9 @@ h5,h4,h3,h2,h1,p,a {
     height: calc(80vh - 60px);
 }
 @media screen and (max-width:768px) {
+    .top-box {
+        height: 80px;
+    }
     .carousel-item img{
         height: calc(40vh - 60px);
     }
@@ -155,6 +158,11 @@ h5,h4,h3,h2,h1,p,a {
     justify-content: center;
     align-items: center;
 }
+@media screen and (max-width:768px) {
+    .carousel-caption {
+        align-items: end;
+    }
+}
 .carousel-control-next-icon {
     background-image: none;
     color: white;
@@ -179,21 +187,23 @@ h5,h4,h3,h2,h1,p,a {
 }
 .proj-imgbox img {
     box-shadow: 4px 4px 5px 2px gray;
+    object-fit: cover;
+    transform: scale(1);
 }
-.proj-imgboxtitle {
+.proj-imgboxtitle{
     position: absolute;
     z-index: 11;
     content: '';
     top: 0;right: 0;
     height: 100%;
     width: 100%;
-    backdrop-filter: blur(0px);
     opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition-duration: .5s;
+    backdrop-filter: blur(15px);
 }
-
-
-
 .project-box h5{
     font-weight: 400;
     text-align: center;
@@ -203,16 +213,11 @@ h5,h4,h3,h2,h1,p,a {
 }
 
 .proj-imgbox:hover .proj-imgboxtitle{
-    backdrop-filter: blur(30px);
     opacity: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     transition-duration: .5s;
 }
 
 /* ccontact */
-
 .contact-tel {
     text-decoration: underline ;
 }

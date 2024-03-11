@@ -14,50 +14,53 @@
     Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!-- img -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css" integrity="sha512-NVt7pmp5f+3eWRPO1h4A1gCf4opn4r5z2wS1mi7AaVcTzE9wDJ6RzMqSygjDzYHLp+mAJ2/qzXXDHar6IQwddQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- main -->
     <link rel="stylesheet" href="main.css">
 </head>
-<body class="animate__animated animate__fadeIn">
-
 <!-- load -->
-<div class="load-box">
-  <div class="">
-    <span class="loader"></span>
+<div class="load-container">
+  <div class="load-box">
+    <div class="">
+      <span class="loader"></span>
+    </div>
   </div>
 </div>
+<body class="animate__animated animate__fadeIn body" id="home">
+
 
   <!-- top -->
-  <div class="" style="height: 60px;" id="home"></div>
-    <div class="top-fixed">
-        <div class="container px-3 top-box d-flex align-items-center">
-            <div class="row  justify-content-between align-items-center w-100">
-                <div class="col-md-4 top-title">
+  <!-- <div class="" style="height: 60px;"></div> -->
+    <div class="top-fixed" data-scroll data-scroll-sticky data-scroll-target="body">
+        <div class="container top-box ">
+            <div class="row py-3 d-flex justify-content-md-between align-items-center">
+                <div class="col-md-4 col-12 top-title d-flex justify-content-md-start justify-content-center align-items-center">
                   <a href="https://zkmeteor.github.io/Vueindex/#/home" target="_blank">
                     <h4 class="m-0">
                       Meteor
                     </h4>
                   </a>
                 </div>
-                <div class="col-md-4 p-0 d-flex justify-content-around align-items-center top-link">
+                <div class="col-md-6 col-12 p-0 d-flex justify-content-around align-items-center top-link">
                     <div class="">
-                        <a href="#home">Home</a>
+                        <a href="#home" data-scroll>Home</a>
                     </div>
                     <div class="">
-                        <a href="#about">About</a>
+                        <a href="#about" data-scroll>About</a>
                     </div>
                     <div class="">
-                        <a href="#project">Project</a>
+                        <a href="#project" data-scroll>Project</a>
                     </div>
                     <div class="">
-                        <a href="#contact">Contact</a>                
+                        <a href="#contact" data-scroll>Contact</a>                
                     </div>
                 </div>
             </div>
         </div>
     </div>
 <!-- scollbox -->
-    <div class="container-fluid"id="scollbox">
+    <div class="container-fluid p-0">
       <!-- banner -->
       <div class="container-fluid px-md-5 p-0">
           <div class="container-md container-fluid-md banner-box p-0">
@@ -111,7 +114,7 @@
                     </div>
               </div>
           </div>
-          <div class="container"id="about" 
+          <div class="container"id="about" data-scroll-id="#about"
             style="height: 100px;">
             <div class="col-6"
             style="border-right: 1px solid #a5a4a4; height: 70px;"></div>
@@ -121,10 +124,10 @@
       <!-- about -->
       <div class="container-fluid" >
         <div class="container about-box">
-          <h3 class="text-center about-title pb-5">01 About</h3>
-          <div class="row d-flex justify-content-center align-items-center">
-              <div class="col-md-6 col-10 py-2">
-                <p style="color: rgb(54, 54, 54);">
+          <h3 class="text-center about-title pb-5" data-scroll data-scroll-speed="-1" >01 About</h3>
+          <div class="row d-flex justify-content-center align-items-center py-5">
+              <div class="col-md-6 col-10 ">
+                <p style="color: rgb(54, 54, 54);" data-scroll data-scroll-speed="1">
                   &emsp;&emsp;Hello! I'm Meteor, a web designer located in Tainan City. I specialize in web design and crafting visual identities.
                 </p>
               </div>
@@ -138,39 +141,47 @@
       <!-- project -->
       <div class="container-fluid">
         <div class="container project-box">
-          <h3 class="text-center about-title pb-5">02 Project</h3>
-            <div class="row py-4 d-flex justify-content-around align-items-center">
-                <div class="col-lg-3 col-md-4 col-6 py-2 proj-imgbox">
-                  <a href="./assets/namepost.png">
-                    <img src="./assets/namepost.png" class="w-100" alt="Your Name Post">
-                    <div class="proj-imgboxtitle">
-                      <h5 class="py-2 ">Your Name Post</h5>
-                    </div>
-                  </a>
+          <h3 class="text-center about-title pb-2" data-scroll data-scroll-speed="-1">02 Project</h3>
+            <div class="row py-5 d-flex justify-content-around align-items-center">
+                <div class="col-md-4 col-6 p-2" data-scroll data-scroll-speed="1">
+                  <div class="proj-imgbox">
+                    <a href="./assets/namepost.png">
+                      <img src="./assets/namepost.png" class="w-100" alt="Your Name Post">
+                      <div class="proj-imgboxtitle">
+                        <h5 class="">Your Name Post</h5>
+                      </div>
+                    </a>
+                  </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-6 py-2 proj-imgbox">
-                  <a href="./assets/risk.png">
-                    <img src="./assets/risk.png" class="w-100" alt="Digital Risk Post">
-                    <div class="proj-imgboxtitle">
-                      <h5 class="py-2 ">Digital Risk Post</h5>
-                    </div>
-                  </a>
+                <div class="col-md-4 col-6 p-2" data-scroll data-scroll-speed="1">
+                  <div class="proj-imgbox">
+                    <a href="./assets/risk.png">
+                      <img src="./assets/risk.png" class="w-100" alt="Digital Risk Post">
+                      <div class="proj-imgboxtitle">
+                        <h5 class="">Digital Risk Post</h5>
+                      </div>
+                    </a>
+                  </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-6 py-2 proj-imgbox">
-                  <a href="./assets/greenhouse.png">
-                    <img src="./assets/greenhouse.png" class="w-100" alt="Green House Post">
-                    <div class="proj-imgboxtitle">
-                      <h5 class="py-2 ">Green House Post</h5>
-                    </div>
-                  </a>
+                <div class="col-md-4 col-6 p-2" data-scroll data-scroll-speed="1">
+                  <div class="proj-imgbox">
+                    <a href="./assets/greenhouse.png">
+                      <img src="./assets/greenhouse.png" class="w-100" alt="Green House Post">
+                      <div class="proj-imgboxtitle">
+                        <h5 class="">Green House Post</h5>
+                      </div>
+                    </a>
+                  </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-5 py-2 proj-imgbox">
-                  <a href="./assets/dm.png">
-                    <img src="./assets/dm.png" class="w-100" alt="Name Card">
-                    <div class="proj-imgboxtitle">
-                      <h5 class="py-2 ">Name Card</h5>
-                    </div>
-                  </a>
+                <div class="col-md-6 col-5 p-2" data-scroll data-scroll-speed="1">
+                  <div class="proj-imgbox">
+                    <a href="./assets/dm.png">
+                      <img src="./assets/dm.png" class="w-100" alt="Name Card">
+                      <div class="proj-imgboxtitle">
+                        <h5 class=" ">Name Card</h5>
+                      </div>
+                    </a>
+                  </div>
                 </div>
             </div>
         </div>
@@ -182,7 +193,7 @@
       <!-- contact -->
       <div class="container-fluid">
         <div class="container contact-box">
-          <h3 class="text-center about-title pb-5">03 Contact</h3>
+          <h3 class="text-center about-title pb-5" data-scroll data-scroll-speed="-1">03 Contact</h3>
             <div class="row">
                 <div class="col-12 d-flex flex-column">
                     <p class="text-center color-g py-2">Mail：<a href="mailto:53065306A@gmail.com" class="color-b contact-tel">53065306A@gmail.com</a></p>
@@ -192,7 +203,6 @@
           </div>
       </div>
   </div>
-</body>
 <!-- img -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js" integrity="sha512-7KzSt4AJ9bLchXCRllnyYUDjfhO2IFEWSa+a5/3kPGQbr+swRTorHQfyADAhSlVHCs1bpFdB1447ZRzFyiiXsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
@@ -207,20 +217,11 @@
 <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.0/dist/locomotive-scroll.min.js"></script>
 <script>
     const slowscroll = new LocomotiveScroll({
-        el: document.querySelector('#scollbox'), // 滾動效果的作用範圍，整個網站都要滑順的話，直接設定 “body”
+        el: document.querySelector('body'), // 滾動效果的作用範圍，整個網站都要滑順的話，直接設定 “body”
         smooth: true,
         lerp: 0.05,
         repeat: true,
     })
-/*     const home = document.querySelector('#home');
-    const about = document.querySelector('#about');
-    const project = document.querySelector('#project');
-    const contact = document.querySelector('#contact');
-
-    slowscroll.scrollTo(home);
-    slowscroll.scrollTo(about);
-    slowscroll.scrollTo(project);
-    slowscroll.scrollTo(contact); */
 
     document.addEventListener("DOMContentLoaded", function() {
       var links = document.querySelectorAll('.top-link a');
@@ -231,28 +232,26 @@
 
               var targetId = this.getAttribute('href').substring(1); // 取得目標 ID
               var targetElement = document.getElementById(targetId); // 取得目標元素
-
-              if (targetElement) {
-                  var offsetTop = targetElement.offsetTop; // 取得目標元素距離網頁頂部的距離
-
-                  // 使用平滑滾動到目標位置
-                  window.scrollTo({
-                      top: offsetTop,
-                      behavior: 'smooth'
-                  });
-              }
+              slowscroll.scrollTo(targetElement);
           });
       });
   });
 </script>
 <!-- load -->
 <script>
-setTimeout(() => {
-    document.querySelector('.load-box').style.opacity = '0';
-    document.querySelector('.load-box').style.transition = '0.5s';
-}, 4000);
-setTimeout(() => {
-    document.querySelector('.load-box').style.display = 'none';
-}, 4500);
+  setTimeout(() => {
+      document.querySelector('.load-box').style.opacity = '0';
+      document.querySelector('.load-box').style.transition = '0.5s';
+  }, 4000);
+  setTimeout(() => {
+      document.querySelector('.load-box').style.display = 'none';
+  }, 4500);
 </script>
+<!-- aos -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
 </html>
