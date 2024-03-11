@@ -14,8 +14,6 @@
     Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!-- img -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css" integrity="sha512-NVt7pmp5f+3eWRPO1h4A1gCf4opn4r5z2wS1mi7AaVcTzE9wDJ6RzMqSygjDzYHLp+mAJ2/qzXXDHar6IQwddQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- aos -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- main -->
     <link rel="stylesheet" href="main.css">
 </head>
@@ -27,13 +25,13 @@
     </div>
   </div>
 </div>
-<body class="animate__animated animate__fadeIn body" id="home">
-
+<body>
+  <div class="body" id="home">
 
   <!-- top -->
   <!-- <div class="" style="height: 60px;"></div> -->
     <div class="top-fixed" data-scroll data-scroll-sticky data-scroll-target="body">
-        <div class="container top-box ">
+        <div class="container top-box">
             <div class="row py-3 d-flex justify-content-md-between align-items-center">
                 <div class="col-md-4 col-12 top-title d-flex justify-content-md-start justify-content-center align-items-center">
                   <a href="https://zkmeteor.github.io/Vueindex/#/home" target="_blank">
@@ -44,23 +42,23 @@
                 </div>
                 <div class="col-md-6 col-12 p-0 d-flex justify-content-around align-items-center top-link">
                     <div class="">
-                        <a href="#home" data-scroll>Home</a>
+                        <a href="#home" data-scroll data-scroll-call="#home">Home</a>
                     </div>
                     <div class="">
-                        <a href="#about" data-scroll>About</a>
+                        <a href="#about" data-scroll data-scroll-call="#about">About</a>
                     </div>
                     <div class="">
-                        <a href="#project" data-scroll>Project</a>
+                        <a href="#project" data-scroll data-scroll-call="#project">Project</a>
                     </div>
                     <div class="">
-                        <a href="#contact" data-scroll>Contact</a>                
+                        <a href="#contact" data-scroll data-scroll-call="#contact">Contact</a>                
                     </div>
                 </div>
             </div>
         </div>
     </div>
 <!-- scollbox -->
-    <div class="container-fluid p-0">
+    <div class="container-fluid p-0 body" >
       <!-- banner -->
       <div class="container-fluid px-md-5 p-0">
           <div class="container-md container-fluid-md banner-box p-0">
@@ -140,11 +138,11 @@
       </div>
       <!-- project -->
       <div class="container-fluid">
-        <div class="container project-box">
+        <div class="container ">
           <h3 class="text-center about-title pb-2" data-scroll data-scroll-speed="-1">02 Project</h3>
-            <div class="row py-5 d-flex justify-content-around align-items-center">
-                <div class="col-md-4 col-6 p-2" data-scroll data-scroll-speed="1">
-                  <div class="proj-imgbox">
+            <div class="row py-5 d-flex justify-content-around align-items-center project-box">
+                <div class="col-md-4 col-6 p-2 proj-imgbox" data-scroll data-scroll-speed="1">
+                  <div class="">
                     <a href="./assets/namepost.png">
                       <img src="./assets/namepost.png" class="w-100" alt="Your Name Post">
                       <div class="proj-imgboxtitle">
@@ -193,7 +191,7 @@
       <!-- contact -->
       <div class="container-fluid">
         <div class="container contact-box">
-          <h3 class="text-center about-title pb-5" data-scroll data-scroll-speed="-1">03 Contact</h3>
+          <h3 class="text-center about-title pb-5">03 Contact</h3>
             <div class="row">
                 <div class="col-12 d-flex flex-column">
                     <p class="text-center color-g py-2">Mail：<a href="mailto:53065306A@gmail.com" class="color-b contact-tel">53065306A@gmail.com</a></p>
@@ -202,40 +200,31 @@
             </div>
           </div>
       </div>
+    </div>
   </div>
-<!-- img -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js" integrity="sha512-7KzSt4AJ9bLchXCRllnyYUDjfhO2IFEWSa+a5/3kPGQbr+swRTorHQfyADAhSlVHCs1bpFdB1447ZRzFyiiXsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script>
-    baguetteBox.run('.project-box', {
-      animation: 'fadeIn',
-      noScrollbars: true
-  });
-</script>
-<!-- bootstrap -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <!-- scoll -->
 <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.0/dist/locomotive-scroll.min.js"></script>
 <script>
-    const slowscroll = new LocomotiveScroll({
-        el: document.querySelector('body'), // 滾動效果的作用範圍，整個網站都要滑順的話，直接設定 “body”
-        smooth: true,
-        lerp: 0.05,
-        repeat: true,
-    })
 
-    document.addEventListener("DOMContentLoaded", function() {
-      var links = document.querySelectorAll('.top-link a');
-
-      links.forEach(function(link) {
-          link.addEventListener('click', function(e) {
-              e.preventDefault(); // 防止點擊連結時瀏覽器跳轉到指定的 URL
-
-              var targetId = this.getAttribute('href').substring(1); // 取得目標 ID
-              var targetElement = document.getElementById(targetId); // 取得目標元素
-              slowscroll.scrollTo(targetElement);
+    window.addEventListener('load', function() {
+          let links = document.querySelectorAll('.top-link a');
+          links.forEach(function(link) {
+              link.addEventListener('click', function(e) {
+                  e.preventDefault(); // 防止點擊連結時瀏覽器跳轉到指定的 URL
+                  let targetId = this.getAttribute('href').substring(1); // 取得目標 ID
+                  let targetElement = document.getElementById(targetId); // 取得目標元素
+                  slowscroll.scrollTo(targetElement);
+              });
           });
+          
+          const slowscroll = new LocomotiveScroll({
+            el: document.querySelector('.body'), // 滾動效果的作用範圍，整個網站都要滑順的話，直接設定 “body”
+            smooth: true,
+            lerp: 0.05,
+            repeat: true,
+          })
       });
-  });
+
 </script>
 <!-- load -->
 <script>
@@ -247,11 +236,23 @@
       document.querySelector('.load-box').style.display = 'none';
   }, 4500);
 </script>
-<!-- aos -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
+  <!-- img -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js" integrity="sha512-7KzSt4AJ9bLchXCRllnyYUDjfhO2IFEWSa+a5/3kPGQbr+swRTorHQfyADAhSlVHCs1bpFdB1447ZRzFyiiXsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+      baguetteBox.run('.project-box', {
+        animation: 'fadeIn',
+        noScrollbars: true
+    });
 
-</body>
+    const projImgBoxes = document.querySelectorAll('.proj-imgbox');
+
+    projImgBoxes.forEach(function(projImgBox) {
+        projImgBox.addEventListener('click', function() {
+            this.style.transform = 'none';
+        });
+    });
+  </script>
+  <!-- bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
 </html>
