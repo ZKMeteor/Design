@@ -132,8 +132,11 @@
           <h3 class="text-center about-title pb-5" data-scroll data-scroll-speed="-1" >01 About</h3>
           <div class="row d-flex justify-content-center align-items-center py-5">
               <div class="col-md-6 col-10 ">
-                <p style="color: rgb(54, 54, 54);" data-scroll data-scroll-speed="1">
+                <p class="py-3" style="color: rgb(54, 54, 54);" data-scroll data-scroll-speed="1">
                   &emsp;&emsp;Hello! I'm Meteor, a web designer located in Tainan City. I specialize in web design and crafting visual identities.
+                </p>
+                <p class="py-3" style="color: rgb(54, 54, 54);" data-scroll data-scroll-speed="1">
+                  &emsp;&emsp;
                 </p>
               </div>
           </div>
@@ -148,52 +151,52 @@
         <div class="container ">
           <h3 class="text-center about-title pb-2" data-scroll data-scroll-speed="-1">02 Project</h3>
             <div class="row py-5 d-flex justify-content-around align-items-center project-box">
-              <div class="col-md-4 col-6 p-2 proj-imgbox" data-scroll data-scroll-speed="1">
-                <div class="">
+              <div class="col-md-4 col-6 p-4" data-scroll data-scroll-speed="1">
+                <div class="proj-imgbox">
                   <a href="./assets/ERP.jpg">
                     <img src="./assets/ERP.jpg" class="w-100" alt="ERP Post">
                     <div class="proj-imgboxtitle">
-                      <h5 class="">ERP Post</h5>
+                      <h3 class="">ERP Post</h3>
                     </div>
                   </a>
                 </div>
               </div>
-                <div class="col-md-4 col-6 p-2 proj-imgbox" data-scroll data-scroll-speed="1">
-                  <div class="">
+                <div class="col-md-4 col-6 p-4" data-scroll data-scroll-speed="1">
+                  <div class="proj-imgbox">
                     <a href="./assets/namepost.jpg">
                       <img src="./assets/namepost.jpg" class="w-100" alt="Your Name Post">
                       <div class="proj-imgboxtitle">
-                        <h5 class="">Your Name Post</h5>
+                        <h3 class="">Your Name Post</h3>
                       </div>
                     </a>
                   </div>
                 </div>
-                <div class="col-md-4 col-6 p-2" data-scroll data-scroll-speed="1">
+                <div class="col-md-4 col-6 p-4" data-scroll data-scroll-speed="1">
                   <div class="proj-imgbox">
                     <a href="./assets/risk.jpg">
                       <img src="./assets/risk.jpg" class="w-100" alt="Digital Risk Post">
                       <div class="proj-imgboxtitle">
-                        <h5 class="">Digital Risk Post</h5>
+                        <h3 class="">Digital Risk Post</h3>
                       </div>
                     </a>
                   </div>
                 </div>
-                <div class="col-md-4 col-6 p-2" data-scroll data-scroll-speed="1">
+                <div class="col-md-4 col-6 p-4" data-scroll data-scroll-speed="1">
                   <div class="proj-imgbox">
                     <a href="./assets/greenhouse.jpg">
                       <img src="./assets/greenhouse.jpg" class="w-100" alt="Green House Post">
                       <div class="proj-imgboxtitle">
-                        <h5 class="">Green House Post</h5>
+                        <h3 class="">Green House Post</h3>
                       </div>
                     </a>
                   </div>
                 </div>
-                <div class="col-md-6 col-5 p-2" data-scroll data-scroll-speed="1">
+                <div class="col-md-6 col-5 p-4" data-scroll data-scroll-speed="1">
                   <div class="proj-imgbox">
                     <a href="./assets/dm.jpg">
                       <img src="./assets/dm.jpg" class="w-100" alt="Name Card">
                       <div class="proj-imgboxtitle">
-                        <h5 class=" ">Name Card</h5>
+                        <h3 class=" ">Name Card</h3>
                       </div>
                     </a>
                   </div>
@@ -224,22 +227,20 @@
 <script>
 
     window.addEventListener('load', function() {
-          let links = document.querySelectorAll('.top-link a');
-          links.forEach(function(link) {
-              link.addEventListener('click', function(e) {
-                  e.preventDefault(); // 防止點擊連結時瀏覽器跳轉到指定的 URL
-                  let targetId = this.getAttribute('href').substring(1); // 取得目標 ID
-                  let targetElement = document.getElementById(targetId); // 取得目標元素
-                  slowscroll.scrollTo(targetElement);
-              });
-          });
-          
-          const slowscroll = new LocomotiveScroll({
-            el: document.querySelector('.body'), // 滾動效果的作用範圍，整個網站都要滑順的話，直接設定 “body”
-            smooth: true,
-            lerp: 0.05,
-            repeat: true,
-          })
+        const slowscroll = new LocomotiveScroll({
+          el: document.querySelector('.body'), // 滾動效果的作用範圍，整個網站都要滑順的話，直接設定 “body”
+          smooth: true,
+          lerp: 0.05,
+        })
+        let links = document.querySelectorAll('.top-link a');
+        links.forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault(); // 防止點擊連結時瀏覽器跳轉到指定的 URL
+                let targetId = this.getAttribute('href').substring(1); // 取得目標 ID
+                let targetElement = document.getElementById(targetId); // 取得目標元素
+                slowscroll.scrollTo(targetElement);
+            });
+        });
       });
 
 </script>

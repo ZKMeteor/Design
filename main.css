@@ -204,8 +204,8 @@ h5,h4,h3,h2,h1,p,a {
     transition-duration: .5s;
     backdrop-filter: blur(15px);
 }
-.project-box h5{
-    font-weight: 400;
+.project-box h3{
+    font-weight: 600;
     text-align: center;
     background: linear-gradient(to right, #ea5350 0%, #f5a500 50%, rgb(6, 221, 6) 100% );
     -webkit-background-clip: text;
