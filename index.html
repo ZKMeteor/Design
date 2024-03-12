@@ -26,7 +26,7 @@
   </div>
 </div>
 <body>
-  <div class="body" id="home">
+<div class="body" id="home">
 
   <!-- top -->
   <!-- <div class="" style="height: 60px;"></div> -->
@@ -181,6 +181,16 @@
                     </a>
                   </div>
                 </div>
+                <div class="col-md-6 col-8 p-4" data-scroll data-scroll-speed="1">
+                  <div class="proj-imgbox">
+                    <a href="./assets/HB.jpg">
+                      <img src="./assets/HB.jpg" class="w-100" alt="Handbook">
+                      <div class="proj-imgboxtitle">
+                        <h3 class="">Handbook</h3>
+                      </div>
+                    </a>
+                  </div>
+                </div>
                 <div class="col-md-4 col-6 p-4" data-scroll data-scroll-speed="1">
                   <div class="proj-imgbox">
                     <a href="./assets/greenhouse.jpg">
@@ -191,7 +201,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="col-md-6 col-5 p-4" data-scroll data-scroll-speed="1">
+                <div class="col-md-3 col-5 p-4" data-scroll data-scroll-speed="1">
                   <div class="proj-imgbox">
                     <a href="./assets/dm.jpg">
                       <img src="./assets/dm.jpg" class="w-100" alt="Name Card">
@@ -214,16 +224,30 @@
           <h3 class="text-center about-title pb-5">03 Contact</h3>
             <div class="row">
                 <div class="col-12 d-flex flex-column py-4">
-                    <p class="text-center color-g py-2">Mail：<a href="mailto:53065306A@gmail.com" class="color-b contact-tel">53065306A@gmail.com</a></p>
-                    <p class="text-center color-g py-2">Tel：<a href="tel:0912176038" class="color-b contact-tel">0912176038</a></p>
-                    <p class="text-center color-g py-2">Discord： <span class="color-b">Meteor#3795</span></p>
-                    <p class="text-center color-g py-2">Line：<span class="color-b">zanki_meteor</span></p>
+                  <p class="text-center color-g py-2">Tel：<a href="tel:0912176038" class="color-b contact-tel">0912176038</a></p>
+                  <p class="text-center color-g py-2">Line：<span class="color-b">zanki_meteor</span></p>
+                  <p class="text-center color-g py-2">Discord：<span class="color-b">Meteor#3795</span></p>
+                  <p class="text-center color-g py-2">Mail：<a href="mailto:53065306A@gmail.com" class="color-b contact-tel">53065306A@gmail.com</a></p>
                 </div>
             </div>
           </div>
       </div>
     </div>
+    <!-- foot -->
+    <div class="container-fluid p-0">
+      <div class="row justify-content-center align-items-center" style="background: white;">
+        <div class="col-12 py-2 footer">
+        </div>
+      </div>
+    </div>
   </div>
+
+<!-- all -->
+<script>
+year = new Date().getFullYear();
+console.log(year);
+document.querySelector('.footer').innerHTML = `<p class="text-center m-0 py-2 color-g">© ${year} by Meteor.</p>`;
+</script>
 <!-- scoll -->
 <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.0/dist/locomotive-scroll.min.js"></script>
 <script>
