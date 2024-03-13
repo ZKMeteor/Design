@@ -104,6 +104,15 @@ h5,h4,h3,h2,h1,p,a {
     z-index: 500;
     background: white;
 }
+@media screen and (max-width:768px) {
+    .top-fixed {
+        width: 100%;
+        position: fixed;
+        top: 0;right: 0;
+        z-index: 500;
+        background: white;
+    }
+}
 /* .top-box {
     height: 60px;
 } */
