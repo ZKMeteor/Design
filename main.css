@@ -121,7 +121,7 @@ h5,h4,h3,h2,h1,p,a {
 /* banner */
 
 .carousel-item img{
-    height: calc(80vh - 60px);
+    height: calc(75vh - 60px);
 }
 @media screen and (max-width:768px) {
     .top-box {
@@ -142,6 +142,7 @@ h5,h4,h3,h2,h1,p,a {
     position: relative;
     z-index: 999 !important;
     font-weight: 400;
+    text-shadow: 2px 2px 0px black;
 }
 
 .carousel-caption {
@@ -171,6 +172,32 @@ h5,h4,h3,h2,h1,p,a {
     background-image: none;
     color: white;
 }
+
+/* down */
+.downbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes Down {
+    0% {
+    transform: translateY(0px) rotate(315deg);
+      opacity: 1;
+    }
+    50% {
+    }
+    100% {
+    transform: translateY(20px) rotate(315deg);
+      opacity: 0;
+    }
+  }
+.down-arrow {
+    animation: Down 1.5s linear infinite;
+    width: 20px;
+    height: 20px;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+  }
 
 /* about */
 
