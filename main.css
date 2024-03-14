@@ -221,8 +221,21 @@ h5,h4,h3,h2,h1,p,a {
 .about-title {
     color: #a5a4a4;
     font-weight: 400;
+    opacity: 0;
+    transition:opacity .7s ease;
+  }
+  
+.about-title.is-inview{
+    opacity: 1;
+}
+.about-box p {
+    opacity: 0;
+    transition:opacity .7s ease;
 }
 
+.about-box p.is-inview{
+    opacity: 1;
+}
 
 /* project */
 
@@ -232,7 +245,12 @@ h5,h4,h3,h2,h1,p,a {
 .proj-imgbox img {
     box-shadow: 4px 4px 5px 2px gray;
     object-fit: cover;
-    transform: scale(1);
+    opacity: 0;
+    transition:opacity .7s ease;
+  }
+  
+.proj-imgbox img.is-inview{
+opacity: 1;
 }
 .proj-imgboxtitle{
     position: absolute;
