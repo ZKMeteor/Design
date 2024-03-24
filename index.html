@@ -10,9 +10,9 @@
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- font -->
-    <link href="https://fonts.googleapis.com/css2?family=
-    Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <!-- img -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">    <!-- img -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css" integrity="sha512-NVt7pmp5f+3eWRPO1h4A1gCf4opn4r5z2wS1mi7AaVcTzE9wDJ6RzMqSygjDzYHLp+mAJ2/qzXXDHar6IQwddQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- main -->
     <link rel="stylesheet" href="main.css">
@@ -25,6 +25,7 @@
     </div>
   </div>
 </div>
+<!-- LOAD -->
 <body>
 <div class="body" id="home">
 
@@ -57,188 +58,225 @@
             </div>
         </div>
     </div>
-<!-- scollbox -->
     <div class="container-fluid p-0" >
-      <div class="container-fluid p-0" data-scroll-id="#home"
-          style="height: 100px;">
-          <div class="col-6"
-          style="border-right: 1px solid #a5a4a4; height: 70px;"></div>
-          <div class="col-6"></div>
+      <div class="container" id="fontend" data-scroll-id="#fontend"
+        style="height: 100px;">
+        <div class="col-6"
+        style="border-right: 1px solid #a5a4a4; height: 70px;"></div>
+        <div class="col-6"></div>
       </div>
-      <!-- banner -->
-        <div class="container-fluid px-md-5 p-0">
-            <div class="container-md container-fluid-md banner-box p-0">
-              <h3 class="text-center about-title" data-scroll data-scroll-offset="400">My Photo</h3>
-                <div class="row p-0 m-0">
-                    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-touch="true">
-                        <!-- <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                        </div> -->
-                        <div class="carousel-inner">
-                          <div class="carousel-item active"> 
-                            <img src="./assets/banner.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Tainan Art Museum</h5>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <img src="./assets/banner1.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>Tainan Art Museum</h5>
-                            </div>
-                          </div>
-                          <div class="carousel-item" >
-                            <img src="./assets/banner2.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>Tainan Confucius Temple</h5>
-                            </div>
-                          </div>
-                          <div class="carousel-item" >
-                            <img src="./assets/banner3.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>Tainan Confucius Temple</h5>
-                            </div>
-                          </div>
-                          <div class="carousel-item" >
-                            <img src="./assets/banner4.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>Tainan Confucius Temple</h5>
-                            </div>
-                          </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
-                      </div>
-                </div>
-            </div>
-            <div class="downbox top-link">
-              <a href="#about" data-scroll data-scroll-call="#about">
-                <div class="down-arrow"></div>
-                <div class="down-arrow"></div>
-              </a>
-            </div>
-            <div class="container mt-5 mb-5"id="about" data-scroll-id="#about"
-              style="height: 100px;">
-              <div class="col-6"
-              style="border-right: 1px solid #a5a4a4; height: 70px;"></div>
-              <div class="col-6"></div>
-            </div>
+      <!-- fontend -->
+      <div class="container-md container-fluild fontend-box py-3">
+        <div class="row">
+          <div class="col p-0">
+            <div class="fontendsize"data-scroll data-scroll-offset="100" data-scroll-direction="horizontal" data-scroll-speed="-1">I AM</div>
+            <div class="fontendsize text-end"data-scroll data-scroll-offset="100" data-scroll-direction="horizontal" data-scroll-speed="1">FRONTEND</div>
+            <div class="fontendsize text-center"data-scroll data-scroll-offset="100" data-scroll-direction="horizontal" data-scroll-speed="-1">ENGINEER</div>
+          </div>
         </div>
+      </div>
+      <div class="downbox top-link">
+        <a href="#about" data-scroll data-scroll-call="#about">
+          <div class="down-arrow"></div>
+          <div class="down-arrow"></div>
+        </a>
+      </div>
+      <div class="container my-5"id="about" data-scroll-id="#about"
+        style="height: 100px;">
+        <div class="col-6"
+        style="border-right: 1px solid #a5a4a4; height: 70px;"></div>
+        <div class="col-6"></div>
+      </div>
+
       <!-- about -->
       <div class="container-fluid" >
-        <div class="container about-box">
-          <h3 class="text-center about-title pb-5 " data-scroll data-scroll-offset="400" data-scroll-speed="-1" >About</h3>
+        <div class="container-md container-fluid about-box">
+          <!-- <h3 class="text-center about-title color-g pb-5 " data-scroll data-scroll-offset="400" data-scroll-speed="-1" >About</h3> -->
           <div class="row d-flex justify-content-center align-items-center py-5">
               <div class="col-md-6 col-10 ">
-                <p class="py-3 " style="color: rgb(54, 54, 54);" data-scroll data-scroll-offset="400" data-scroll-direction="horizontal" data-scroll-speed="1">
-                  &emsp;&emsp;Hello! I'm Meteor, a web designer located in Tainan City. I specialize in web design and crafting visual identities.
+                <p class="py-3 color-b" style="font-family: Playfair Display, serif;" data-scroll data-scroll-offset="100" data-scroll-direction="horizontal" data-scroll-speed="1">
+                  Hello! I'm Meteor, a web designer located in Tainan City. I specialize in web design and crafting visual identities.
                 </p>
-                <p class="py-3 " style="color: rgb(54, 54, 54);" data-scroll data-scroll-offset="400" data-scroll-direction="horizontal" data-scroll-speed="-1">
-                  &emsp;&emsp;Normally, I like to read websites written by other people, learn their designs, and add my own practice websites in my attempts, hoping to learn more skills in the future.
+                <p class="py-3 color-b" style="font-family: Playfair Display, serif;" data-scroll data-scroll-offset="100" data-scroll-direction="horizontal" data-scroll-speed="-1">
+                  Normally, I like to read websites written by other people, learn their designs, and add my own practice websites in my attempts, hoping to learn more skills in the future.
                 </p>
               </div>
           </div>
         </div>
-        <div class="container"style="height: 100px;" id="project">
+        <div class="downbox top-link">
+          <a href="#project" data-scroll data-scroll-call="#project">
+            <div class="down-arrow"></div>
+            <div class="down-arrow"></div>
+          </a>
+        </div>
+        <div class="container my-5"style="height: 100px;" id="project">
           <div class="col-6" style="border-right: 1px solid #a5a4a4; height: 70px;"></div>
           <div class="col-6"></div>
         </div>
       </div>
-      <!-- project -->
-      <div class="container-fluid ">
-        <div class="container ">
-          <h3 class="text-center about-title pb-2" data-scroll data-scroll-offset="400" data-scroll-speed="-1">02 Project</h3>
-            <div class="row py-5 d-flex justify-content-around align-items-center project-box">
-              <div class="col-md-4 col-6 p-4" data-scroll data-scroll-speed="1">
-                <div class="proj-imgbox">
-                  <a href="./assets/ERP.jpg">
-                    <img data-scroll data-scroll-offset="400" data-scroll-direction="horizontal" src="./assets/ERP.jpg" class="w-100" alt="ERP Post">
-                    <div class="proj-imgboxtitle">
-                      <h3 class="">ERP Post</h3>
+
+      <!-- change -->
+      <div class="changeclassend">
+        <!-- project -->
+        <div class="container-fluid ">
+          <div class="container ">
+              <div class="row py-5 d-flex justify-content-around align-items-center project-box">
+                <div class="col-md-4 col-6 p-4" data-scroll data-scroll-speed="1">
+                  <div class="proj-imgbox">
+                    <a href="./assets/ERP.jpg">
+                      <img data-scroll data-scroll-offset="400" data-scroll-direction="horizontal" src="./assets/ERP.jpg" class="w-100" alt="ERP Post">
+                      <div class="proj-imgboxtitle">
+                        <h3 class="">ERP Post</h3>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                  <div class="col-md-4 col-6 p-4" data-scroll data-scroll-speed="1">
+                    <div class="proj-imgbox">
+                      <a href="./assets/namepost.jpg">
+                        <img data-scroll data-scroll-offset="400" data-scroll-direction="horizontal" src="./assets/namepost.jpg" class="w-100" alt="Your Name Post">
+                        <div class="proj-imgboxtitle">
+                          <h3 class="">Your Name Post</h3>
+                        </div>
+                      </a>
                     </div>
-                  </a>
-                </div>
+                  </div>
+                  <div class="col-md-4 col-6 p-4" data-scroll data-scroll-speed="1">
+                    <div class="proj-imgbox">
+                      <a href="./assets/risk.jpg">
+                        <img data-scroll data-scroll-offset="400" data-scroll-direction="horizontal" src="./assets/risk.jpg" class="w-100" alt="Digital Risk Post">
+                        <div class="proj-imgboxtitle">
+                          <h3 class="">Digital Risk Post</h3>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-8 p-4" data-scroll data-scroll-speed="1">
+                    <div class="proj-imgbox">
+                      <a href="./assets/HB.jpg">
+                        <img data-scroll data-scroll-offset="400" data-scroll-direction="horizontal" src="./assets/HB.jpg" class="w-100" alt="Handbook">
+                        <div class="proj-imgboxtitle">
+                          <h3 class="">Handbook</h3>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-6 p-4" data-scroll data-scroll-speed="1">
+                    <div class="proj-imgbox">
+                      <a href="./assets/greenhouse.jpg">
+                        <img data-scroll data-scroll-offset="400" data-scroll-direction="horizontal" src="./assets/greenhouse.jpg" class="w-100" alt="Green House Post">
+                        <div class="proj-imgboxtitle">
+                          <h3 class="">Green House Post</h3>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-5 p-4" data-scroll data-scroll-speed="1">
+                    <div class="proj-imgbox">
+                      <a href="./assets/dm.jpg">
+                        <img data-scroll data-scroll-offset="400" data-scroll-direction="horizontal" data-scroll src="./assets/dm.jpg" class="w-100" alt="Name Card">
+                        <div class="proj-imgboxtitle">
+                          <h3 class=" ">Name Card</h3>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
               </div>
-                <div class="col-md-4 col-6 p-4" data-scroll data-scroll-speed="1">
-                  <div class="proj-imgbox">
-                    <a href="./assets/namepost.jpg">
-                      <img data-scroll data-scroll-offset="400" data-scroll-direction="horizontal" src="./assets/namepost.jpg" class="w-100" alt="Your Name Post">
-                      <div class="proj-imgboxtitle">
-                        <h3 class="">Your Name Post</h3>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-md-4 col-6 p-4" data-scroll data-scroll-speed="1">
-                  <div class="proj-imgbox">
-                    <a href="./assets/risk.jpg">
-                      <img data-scroll data-scroll-offset="400" data-scroll-direction="horizontal" src="./assets/risk.jpg" class="w-100" alt="Digital Risk Post">
-                      <div class="proj-imgboxtitle">
-                        <h3 class="">Digital Risk Post</h3>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-md-6 col-8 p-4" data-scroll data-scroll-speed="1">
-                  <div class="proj-imgbox">
-                    <a href="./assets/HB.jpg">
-                      <img data-scroll data-scroll-offset="400" data-scroll-direction="horizontal" src="./assets/HB.jpg" class="w-100" alt="Handbook">
-                      <div class="proj-imgboxtitle">
-                        <h3 class="">Handbook</h3>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-md-4 col-6 p-4" data-scroll data-scroll-speed="1">
-                  <div class="proj-imgbox">
-                    <a href="./assets/greenhouse.jpg">
-                      <img data-scroll data-scroll-offset="400" data-scroll-direction="horizontal" src="./assets/greenhouse.jpg" class="w-100" alt="Green House Post">
-                      <div class="proj-imgboxtitle">
-                        <h3 class="">Green House Post</h3>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-md-3 col-5 p-4" data-scroll data-scroll-speed="1">
-                  <div class="proj-imgbox">
-                    <a href="./assets/dm.jpg">
-                      <img data-scroll data-scroll-offset="400" data-scroll-direction="horizontal" data-scroll src="./assets/dm.jpg" class="w-100" alt="Name Card">
-                      <div class="proj-imgboxtitle">
-                        <h3 class=" ">Name Card</h3>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-            </div>
-        </div>
-        <div class="container"style="height: 100px;" id="contact">
-          <div class="col-6" style="border-right: 1px solid #a5a4a4; height: 70px;"></div>
-          <div class="col-6"></div>
-        </div>
-      </div>
-      <!-- contact -->
-      <div class="container-fluid pb-5">
-        <div class="container about-box">
-          <h3 class="text-center about-title pb-5" data-scroll data-scroll-offset="400">Contact</h3>
-            <div class="row">
-                <div class="col-12 d-flex flex-column py-4">
-                  <p class="text-center color-g py-2"data-scroll data-scroll-offset="100" data-scroll-direction="horizontal" >Tel：<a href="tel:0912176038" class="color-b contact-tel">0912176038</a></p>
-                  <p class="text-center color-g py-2"data-scroll data-scroll-offset="100" data-scroll-direction="horizontal" >Line：<span class="color-b">zanki_meteor</span></p>
-                  <p class="text-center color-g py-2"data-scroll data-scroll-offset="100" data-scroll-direction="horizontal" >Discord：<span class="color-b">Meteor#3795</span></p>
-                  <p class="text-center color-g py-2"data-scroll data-scroll-offset="100" data-scroll-direction="horizontal" >Mail：<a href="mailto:53065306A@gmail.com" class="color-b contact-tel">53065306A@gmail.com</a></p>
-                </div>
-            </div>
           </div>
+          <div class="downbox top-link">
+            <a href="#banner" data-scroll data-scroll-call="#banner">
+              <div class="down-arrow"></div>
+              <div class="down-arrow"></div>
+            </a>
+          </div>
+          <div class="container my-5"style="height: 100px;" id="banner">
+            <div class="col-6" style="border-right: 1px solid #a5a4a4; height: 70px;"></div>
+            <div class="col-6"></div>
+          </div>
+        </div>
+
+
+        <!-- banner -->
+        <div class="container-fluid px-md-5 p-0">
+          <div class="container-md container-fluid banner-box p-0">
+              <div class="row p-0 m-0">
+                  <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-touch="true">
+                      <!-- <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                      </div> -->
+                      <div class="carousel-inner">
+                        <div class="carousel-item active"> 
+                          <img src="./assets/banner.jpg" class="d-block w-100" alt="...">
+                          <div class="carousel-caption d-none d-md-block">
+                              <h5>Tainan Art Museum</h5>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img src="./assets/banner1.jpg" class="d-block w-100" alt="...">
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>Tainan Art Museum</h5>
+                          </div>
+                        </div>
+                        <div class="carousel-item" >
+                          <img src="./assets/banner2.jpg" class="d-block w-100" alt="...">
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>Tainan Confucius Temple</h5>
+                          </div>
+                        </div>
+                        <div class="carousel-item" >
+                          <img src="./assets/banner3.jpg" class="d-block w-100" alt="...">
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>Tainan Confucius Temple</h5>
+                          </div>
+                        </div>
+                        <div class="carousel-item" >
+                          <img src="./assets/banner4.jpg" class="d-block w-100" alt="...">
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>Tainan Confucius Temple</h5>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+              </div>
+          </div>
+          <div class="downbox top-link mt-3">
+            <a href="#conatct" data-scroll data-scroll-call="#conatct">
+              <div class="down-arrow"></div>
+              <div class="down-arrow"></div>
+            </a>
+          </div>
+          <div class="container my-5" id="conatct" data-scroll-id="#conatct"
+            style="height: 100px;">
+            <div class="col-6"
+            style="border-right: 1px solid #a5a4a4; height: 70px;"></div>
+            <div class="col-6"></div>
+          </div>
+        </div>
+        <!-- contact -->
+        <div class="container-fluid pb-5">
+          <div class="container about-box">
+              <div class="row">
+                  <div class="col-12 d-flex flex-column py-4">
+                    <p class="text-center color-g py-2"data-scroll data-scroll-offset="100" data-scroll-direction="horizontal" >Tel：<a href="tel:0912176038" class="color-b contact-tel">0912176038</a></p>
+                    <p class="text-center color-g py-2"data-scroll data-scroll-offset="100" data-scroll-direction="horizontal" >Line：<span class="color-b">zanki_meteor</span></p>
+                    <p class="text-center color-g py-2"data-scroll data-scroll-offset="100" data-scroll-direction="horizontal" >Discord：<span class="color-b">Meteor#3795</span></p>
+                    <p class="text-center color-g py-2"data-scroll data-scroll-offset="100" data-scroll-direction="horizontal" >Mail：<a href="mailto:53065306A@gmail.com" class="color-b contact-tel">53065306A@gmail.com</a></p>
+                  </div>
+              </div>
+            </div>
+        </div>
       </div>
     </div>
     <!-- foot -->
@@ -249,7 +287,6 @@
       </div>
     </div>
   </div>
-<div class="changeclassend"></div>
 <!-- all -->
 <script>
 year = new Date().getFullYear();
@@ -280,31 +317,58 @@ document.querySelector('.footer').innerHTML = `<p class="text-center m-0 py-2 co
 </script>
 <!-- addclss -->
 <script>
-/* const topfixed = document.querySelector('.top-fixed');
+
 const changeclassend = document.querySelector('.changeclassend');
 const changeclass = document.querySelectorAll('.changeclass');
 
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-
-
-          topfixed.classList.remove('changed')
-          changeclass.forEach( i =>{
-            i.classList.remove('changed');
-          })
-        } else {
-
-
-          topfixed.classList.add('changed')
-          changeclass.forEach( i =>{
-            i.classList.add('changed');
-          })
-        }
-    });
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      document.querySelector('body').style.background = '#282f40';
+      document.querySelector('.top-fixed').style.background = '#282f40';
+      document.querySelectorAll('.fontendsize').forEach((i)=>{
+        i.style.color = '#fff9f0';
+      });
+      document.querySelectorAll('.about-box p').forEach((i)=>{
+        i.style.color = '#fff9f0';
+      });
+      document.querySelectorAll('.top-link a').forEach((i)=>{
+        i.style.color = '#fff9f0';
+        i.style.transition = '0.5s';
+      });
+      document.querySelectorAll('.top-title h4').forEach((i)=>{
+        i.style.color = '#fff9f0';
+        i.style.transition = '0.5s';
+      });
+      document.querySelectorAll('.down-arrow').forEach((i)=>{
+        i.style.borderColor = '#fff9f0';
+        i.style.transition = '0.5s';
+      });
+    } else {
+      document.querySelector('body').style.background = '#fffdf5';
+      document.querySelector('.top-fixed').style.background = 'white';
+      document.querySelectorAll('.fontendsize').forEach((i)=>{
+        i.style.color = '#a5a4a4';
+      });
+      document.querySelectorAll('.about-box p').forEach((i)=>{
+        i.style.color = '#a5a4a4';
+      });
+      document.querySelectorAll('.top-link a').forEach((i)=>{
+        i.style.color = '#a5a4a4';
+      });
+      document.querySelectorAll('.top-title h4').forEach((i)=>{
+        i.style.color = '#a5a4a4';
+      });
+      document.querySelectorAll('.down-arrow').forEach((i)=>{
+        i.style.borderColor = '#282f40';
+        i.style.transition = '0.5s';
+      });
+    }
+  });
 });
 
-observer.observe(changeclassend); */
+
+observer.observe(changeclassend);
 
 </script>
 <!-- load -->

@@ -8,6 +8,7 @@
 }
 body {
     background: #fffdf5;
+    transition: .5s;
 }
 .c-scrollbar {
     display: none;
@@ -23,7 +24,7 @@ h5,h4,h3,h2,h1,p,a {
     color: #a5a4a4;
 }
 .color-b {
-    color: black;
+    color: #363636;
 }
 .bg {
     background: gray;
@@ -134,7 +135,20 @@ h5,h4,h3,h2,h1,p,a {
         text-align: center;
     }
 }
+/* fontend */
 
+.fontendsize {
+    font-size: 10rem;
+    line-height: 1.2;
+    font-weight: 600;
+}
+@media screen and (max-width:768px) {
+    .fontendsize {
+        font-size: 5rem;
+        line-height: 1;
+        font-weight: 600;
+    }
+}
 /* banner */
 
 .carousel-item img{
@@ -198,13 +212,13 @@ h5,h4,h3,h2,h1,p,a {
 }
 @keyframes Down {
     0% {
-    transform: translateY(0px) rotate(315deg);
+    transform: translateY(-10px) rotate(315deg);
       opacity: 1;
     }
     50% {
     }
     100% {
-    transform: translateY(20px) rotate(315deg);
+    transform: translateY(10px) rotate(315deg);
       opacity: 0;
     }
   }
@@ -219,7 +233,6 @@ h5,h4,h3,h2,h1,p,a {
 /* about */
 
 .about-title {
-    color: #a5a4a4;
     font-weight: 400;
     opacity: 0;
     transition:opacity .7s ease;
@@ -231,6 +244,7 @@ h5,h4,h3,h2,h1,p,a {
 .about-box p {
     opacity: 0;
     transition:opacity .7s ease;
+    font-size: 2rem;
 }
 
 .about-box p.is-inview{
