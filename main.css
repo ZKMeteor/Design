@@ -255,10 +255,20 @@ h5,h4,h3,h2,h1,p,a {
 .about-box p.is-inview{
     opacity: 1;
 }
+.about-imgbox {
+}
+@media screen and (max-width:768px) {
+    .about-imgbox {
+        position: absolute;
+        right: 0;
+        z-index: -1;
+    }
+}
 .about-img {
     position: relative;
     opacity: 0;
 }
+
 .about-img.is-inview {
     opacity: 1;
     transition:opacity .5s ease;
@@ -266,7 +276,7 @@ h5,h4,h3,h2,h1,p,a {
 .about-img::after {
     content: '';
     position: absolute;
-    top: 0;right: 0;
+    top: 0;right: 0;bottom: 0;left: 0;
     width: 100%;
     height: 100%;
     background: #282f40;
@@ -287,6 +297,36 @@ h5,h4,h3,h2,h1,p,a {
 }
 .Project-title.is-inview {
     opacity: 1;
+    transition: .5s ease;
+}
+.proj-line {
+    position: relative;
+    transition: width 1s ease; /* 將過渡效果應用於寬度 */
+    width: 0%; /* 初始寬度為0% */
+    height: 1px; /* 設置邊框的高度 */
+    background-color: #000; /* 設置邊框的顏色 */
+}
+.proj-line.is-inview {
+    width: 100%; /* 將寬度設置為100%，邊框完全可見 */
+}
+.project-box p{
+    opacity: 0;
+}
+.project-box p.is-inview{
+    opacity: 1;
+    transition: .5s ease;
+}
+.project-box a{
+    font-family: Playfair Display, serif;
+    font-weight:600;
+    color: #282f40;
+    font-size: 3rem;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+.project-box a.is-inview{
+    opacity: 1;
+    transform: translateY(0px);
     transition: .5s ease;
 }
 .proj-imgbox {

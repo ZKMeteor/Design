@@ -71,7 +71,7 @@
       <!-- fontend -->
       <div class="container-md container-fluild fontend-box py-3">
         <div class="row">
-          <div class="col p-1">
+          <div class="col px-2">
             <div class="fontendsize"data-scroll data-scroll-offset="100" data-scroll-direction="horizontal" data-scroll-speed="-1">I AM</div>
             <div class="fontendsize text-end"data-scroll data-scroll-offset="100" data-scroll-direction="horizontal" data-scroll-speed="1">FRONTEND</div>
             <div class="fontendsize text-center"data-scroll data-scroll-offset="100" data-scroll-direction="horizontal" data-scroll-speed="-1">ENGINEER</div>
@@ -94,27 +94,28 @@
       <!-- about -->
       <div class="container-fluid mb-5" >
         <div class="container-md container-fluid about-box">
-          <h3 class="text-center about-title color-g " data-scroll data-scroll-offset="100" data-scroll-speed="-1" >About</h3>
-          <div class="row d-flex justify-content-center align-items-center py-5">
+          <h3 class="text-center about-title color-g pb-5" data-scroll data-scroll-offset="100" data-scroll-speed="-1" >About</h3>
+          <div class="row d-flex justify-content-center align-items-center py-5" style="position: relative;">
               <div class="col-md-6 col-10 py-2">
                 <p class="py-3 color-b" style="font-family: Playfair Display, serif;" data-scroll data-scroll-offset="400" data-scroll-direction="horizontal" data-scroll-speed="1">
                   Hello! I'm Meteor, a web designer located in Tainan City. I specialize in web design and crafting visual identities.
                 </p>
               </div>
-              <div class="col-md-5 col-10 py-2">
+              <div class="col-md-5 col-6 py-2 about-imgbox">
                 <div class="about-img" data-scroll data-scroll-offset="400">
                   <img src="./assets/myself.jpg" alt="myself" style="width: 100%;object-fit: cover;">
                 </div>
               </div>
+              <div class="col-12"></div>
             </div>
-            <div class="row py-3">
-              <div class="about-yearbox col-md-6 col-10 py-2" data-scroll>
+            <div class="row py-3 d-flex justify-content-center align-items-center">
+              <div class="about-yearbox col-md-5 col-10 py-2" data-scroll>
                 <span class="about-year" data-scroll data-scroll-sticky data-scroll-target=".about-yearbox">
                   2018</br>
                   -&nbsp;2022
                 </span>
               </div>
-              <div class="col-md-6 col-10 py-2">
+              <div class="col-md-7 col-10 py-5">
                 <p class="py-3 color-b" style="font-family: Playfair Display, serif;" data-scroll data-scroll-offset="400" data-scroll-direction="horizontal" data-scroll-speed="-1">
                   I graduated from STUST. Typically, I enjoy perusing websites crafted by others, studying their designs, and incorporating elements into my own practice sites as I strive to enhance my skills for the future.                </p>
               </div>
@@ -137,8 +138,26 @@
         <!-- project -->
         <div class="container-fluid">
           <div class="container">
-            <h3 class="text-center Project-title " data-scroll data-scroll-offset="200" data-scroll-speed="-1" >Project</h3>
-              <div class="row py-5 d-flex justify-content-around align-items-center project-box">
+            <h3 class="text-center Project-title pb-5" data-scroll data-scroll-offset="100" data-scroll-speed="-1">Project</h3>
+            <div class="row project-box py-2" style="font-size: 1.5rem;font-family: Playfair Display, serif;" data-scroll>
+              <div class="col-md-3"data-scroll>Type</div>
+              <div class="col-md-6"data-scroll>Project</div>
+              <div class="col-md-3"data-scroll>Introduction</div>
+              <div class="col-12 proj-line my-2" data-scroll data-scroll-offset="100"></div>
+            </div>
+            <div class="row project-box py-4" style="font-size: 3rem;" data-scroll>
+              <div class="col-md-3"><p style="font-family: Playfair Display, serif;"data-scroll data-scroll-offset="300">Web</p></div>
+              <div class="col-md-6"><a target="_blank" href="https://zkmeteor.github.io/sm_web/#/"data-scroll data-scroll-offset="300">E-commerce</a></div>
+              <div class="col-md-3"><p style="font-family: Playfair Display, serif;"data-scroll data-scroll-offset="300">Vue</p></div>
+              <div class="col-12 proj-line my-2" data-scroll data-scroll-offset="100"></div>
+            </div>
+            <div class="row project-box py-4" style="font-size: 3rem;" data-scroll>
+              <div class="col-md-3"><p style="font-family: Playfair Display, serif;"data-scroll data-scroll-offset="300">Design</p></div>
+              <div class="col-md-6 proj-imgbox"><a target="_blank" data-scroll data-scroll-offset="300" href="./assets/namepost.jpg">Poster</a></div>
+              <div class="col-md-3"><p style="font-family: Playfair Display, serif;"data-scroll data-scroll-offset="300">Ps&Ai</p></div>
+              <div class="col-12 proj-line my-2" data-scroll data-scroll-offset="100"></div>
+            </div>
+<!--               <div class="row py-5 d-flex justify-content-around align-items-center project-box">
                 <div class="col-md-4 col-6 p-4" data-scroll data-scroll-speed="1">
                   <div class="proj-imgbox">
                     <a href="./assets/ERP.jpg">
@@ -199,7 +218,7 @@
                       </a>
                     </div>
                   </div>
-              </div>
+              </div> -->
           </div>
           <div class="downbox top-link">
             <a href="#photo" data-scroll data-scroll-call="#photo">
@@ -217,7 +236,7 @@
         <!-- banner -->
         <div class="container-fluid px-md-5 p-0">
           <div class="container-md container-fluid banner-box p-0">
-            <h3 class="text-center Project-title color-b py-3" data-scroll data-scroll-offset="100" >Photo</h3>
+            <h3 class="text-center Project-title color-b pb-5" data-scroll data-scroll-offset="100" data-scroll-speed="-1">Photo</h3>
               <div class="row p-0 m-0">
                   <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-touch="true">
                       <!-- <div class="carousel-indicators">
@@ -286,7 +305,7 @@
         <!-- contact -->
         <div class="container-fluid pb-5">
           <div class="container contact-box">
-            <h3 class="text-center Project-title color-b py-3" data-scroll data-scroll-offset="100" >Contact</h3>
+            <h3 class="text-center Project-title color-b pb-5" data-scroll data-scroll-offset="100" data-scroll-speed="-1">Contact</h3>
               <div class="row">
                   <div class="col-12 d-flex flex-column py-4">
                     <p class="text-center color-b py-2"data-scroll data-scroll-offset="100" data-scroll-direction="horizontal">Tel：<a href="tel:0912176038" class="color-b contact-tel">0912176038</a></p>
@@ -426,7 +445,7 @@ window.onload = function() {
   <!-- img -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js" integrity="sha512-7KzSt4AJ9bLchXCRllnyYUDjfhO2IFEWSa+a5/3kPGQbr+swRTorHQfyADAhSlVHCs1bpFdB1447ZRzFyiiXsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
-      baguetteBox.run('.project-box', {
+      baguetteBox.run('.proj-imgbox', {
         animation: 'fadeIn',
         noScrollbars: true
     });
