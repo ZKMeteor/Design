@@ -239,7 +239,6 @@ h5,h4,h3,h2,h1,p,a {
 .about-title {
     font-weight: 400;
     opacity: 0;
-    transition:opacity .7s ease;
   }
   
 .about-title.is-inview{
@@ -297,11 +296,10 @@ h5,h4,h3,h2,h1,p,a {
 }
 .Project-title.is-inview {
     opacity: 1;
-    transition: .5s ease;
 }
 .proj-line {
     position: relative;
-    transition: width 1s ease; /* 將過渡效果應用於寬度 */
+    transition: width 1.5s ease; /* 將過渡效果應用於寬度 */
     width: 0%; /* 初始寬度為0% */
     height: 1px; /* 設置邊框的高度 */
     background-color: #000; /* 設置邊框的顏色 */

@@ -140,9 +140,9 @@
           <div class="container">
             <h3 class="text-center Project-title pb-5" data-scroll data-scroll-offset="100" data-scroll-speed="-1">Project</h3>
             <div class="row project-box py-2" data-scroll>
-              <div class="col-md-3"data-scroll style="font-size: 1.5rem;font-family: Playfair Display, serif;">Type</div>
-              <div class="col-md-6"data-scroll style="font-size: 1.5rem;font-family: Playfair Display, serif;">Project</div>
-              <div class="col-md-3"data-scroll style="font-size: 1.5rem;font-family: Playfair Display, serif;">Introduction</div>
+              <div class="col-md-3"data-scroll style="font-size: 1.5rem;font-family: Playfair Display, serif;"><p data-scroll>Type</p></div>
+              <div class="col-md-6"data-scroll style="font-size: 1.5rem;font-family: Playfair Display, serif;"><p data-scroll>Project</p></div>
+              <div class="col-md-3"data-scroll style="font-size: 1.5rem;font-family: Playfair Display, serif;"><p data-scroll>Introduction</p></div>
               <div class="col-12 proj-line my-2" data-scroll data-scroll-offset="100"></div>
             </div>
             <div class="row project-box py-4" style="font-size: 3rem;" data-scroll>
@@ -395,6 +395,18 @@ const observer = new IntersectionObserver((entries) => {
         i.style.transition = '0.5s';
       });
       document.querySelector('.Project-title').style.color = '#fff9f0';
+      document.querySelectorAll('.proj-line').forEach((i)=>{
+        i.style.backgroundColor = '#fff9f0';
+        i.style.transition = '0.5s';
+      });
+      document.querySelectorAll('.project-box a').forEach((i)=>{
+        i.style.color = '#fff9f0';
+        i.style.transition = '0.5s';
+      });
+      document.querySelectorAll('.project-box p').forEach((i)=>{
+        i.style.color = '#fff9f0';
+        i.style.transition = '0.5s';
+      });
     } else {
       document.querySelector('body').style.background = '#fffdf5';
       document.querySelector('.top-fixed').style.background = 'white';
@@ -419,9 +431,25 @@ const observer = new IntersectionObserver((entries) => {
         i.style.transition = '0.5s';
       });
       document.querySelector('.Project-title').style.color = '#a5a4a4';
+      document.querySelectorAll('.project-box').forEach((i)=>{
+        i.style.color = '#a5a4a4';
+        i.style.transition = '0.5s';
+      });
+      document.querySelectorAll('.proj-line').forEach((i)=>{
+        i.style.backgroundColor = '#a5a4a4';
+        i.style.transition = '0.5s';
+      });
+      document.querySelectorAll('.project-box a').forEach((i)=>{
+        i.style.color = '#a5a4a4';
+        i.style.transition = '0.5s';
+      });
+      document.querySelectorAll('.project-box P').forEach((i)=>{
+        i.style.color = '#a5a4a4';
+        i.style.transition = '0.5s';
+      });
     }
   });
-});
+},{ rootMargin: '-40% 0px' });
 
 
 observer.observe(changeclassend);
