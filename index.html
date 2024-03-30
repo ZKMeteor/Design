@@ -26,9 +26,9 @@
   </div>
 </div>
 <!-- LOAD -->
-<body>
+<body class="">
+  <div id="myCursor"></div>
 <div class="body" id="home">
-
   <!-- top -->
   <!-- <div class="" style="height: 60px;"></div> -->
     <div class="top-fixed" data-scroll data-scroll-sticky data-scroll-target=".body" data-scroll-offset="0">
@@ -495,4 +495,15 @@ window.onload = function() {
   <!-- bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
+  <!-- mouse -->
+  <script>
+    let cursor = document.getElementById("myCursor");
+
+    window.addEventListener("mousemove",function(e){
+      let x = e.clientX;
+      let y = e.clientY;
+      cursor.style.left = x-27+"px";
+      cursor.style.top = y-27+"px";
+    })
+  </script>
 </html>

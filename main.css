@@ -9,7 +9,24 @@
 body {
     background: #fffdf5;
     transition: .5s;
+    cursor: none;
 }
+a {
+    cursor: none;
+}
+#myCursor {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: solid 2px #d9d9d9;
+    position: absolute;
+    transition-duration: 0.1s;
+    box-shadow: 0px 0px 15px 3px rgba(#94d6ff,1);
+    box-sizing: border-box;
+    pointer-events: none;
+    z-index: 9999;
+}
+
 .c-scrollbar {
     display: none;
 }
