@@ -8,7 +8,7 @@
 }
 body {
     background: #fffdf5;
-    transition: .5s;
+    transition: .7s ease;
     cursor: none;
 }
 a {
@@ -318,7 +318,7 @@ h5,h4,h3,h2,h1,p,a {
     position: relative;
     transition: width 1.5s ease; /* 將過渡效果應用於寬度 */
     width: 0%; /* 初始寬度為0% */
-    height: 1px; /* 設置邊框的高度 */
+    height: 2px; /* 設置邊框的高度 */
     background-color: #000; /* 設置邊框的顏色 */
 }
 .proj-line.is-inview {
