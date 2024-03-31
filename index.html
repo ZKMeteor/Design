@@ -27,34 +27,38 @@
 </div>
 <!-- LOAD -->
 <body class="">
-  <div id="myCursor"></div>
+<div id="myCursor"></div>
 <div class="body" id="home">
   <!-- top -->
   <!-- <div class="" style="height: 60px;"></div> -->
     <div class="top-fixed" data-scroll data-scroll-sticky data-scroll-target=".body" data-scroll-offset="0">
-        <div class="container top-box">
+        <div class="container-md container-fluid top-box">
             <div class="row py-3 d-flex justify-content-md-between align-items-center">
-                <div class="col-md-4 col-12 top-title d-flex justify-content-md-start justify-content-center align-items-center">
+                <div class="pl-2 col-md-4 col-6 top-title d-flex align-items-center">
                   <a href="https://zkmeteor.github.io/Vueindex/#/home" target="_blank">
                     <h4 class="m-0">
                       Meteor
                     </h4>
                   </a>
                 </div>
-                <div class="col-md-6 col-12 p-0 d-flex justify-content-around align-items-center top-link">
-                    <div class="">
+                <input type="checkbox" id="rwdbtn" class="d-none">
+                <div class="rwdbtnbox col-6">
+                  <label for="rwdbtn" class="rwdbtn"></label>
+                </div>
+                <div class="col-md-6 col-12 p-0 d-flex justify-content-md-around justify-content-center align-items-center top-link navbar-btn">
+                    <div class="py-2">
                         <a href="#home" class="" data-scroll data-scroll-call="#home">Top</a>
                     </div>
-                    <div class="">
+                    <div class="py-2">
                         <a href="#about" class="" data-scroll data-scroll-call="#about">About</a>
                     </div>
-                    <div class="">
+                    <div class="py-2">
                         <a href="#project" class="" data-scroll data-scroll-call="#project">Project</a>
                     </div>
-                    <div class="">
+                    <div class="py-2">
                       <a href="#photo" class="" data-scroll data-scroll-call="#photo">Photo</a>
-                  </div>
-                    <div class="">
+                    </div>
+                    <div class="py-2">
                         <a href="#contact" class="" data-scroll data-scroll-call="#contact">Contact</a>                
                     </div>
                 </div>
@@ -372,15 +376,13 @@ const observer = new IntersectionObserver((entries) => {
     if (!entry.isIntersecting) {
       document.querySelector('body').style.background = '#282f40';
       document.querySelector('.top-fixed').style.background = '#282f40';
+      document.querySelector('.rwdbtn').style.boxShadow = '0px -1px 0px rgb(255, 255, 255), 0px -8px 0px white, 0px -15px 0px white';
+      document.querySelector('#myCursor').style.borderColor = '#d9d9d9';
       document.querySelectorAll('.fontendsize').forEach((i)=>{
         i.style.color = '#fff9f0';
       });
       document.querySelectorAll('.about-box p').forEach((i)=>{
         i.style.color = '#fff9f0';
-      });
-      document.querySelectorAll('.top-link a').forEach((i)=>{
-        i.style.color = '#fff9f0';
-        i.style.transition = '0.5s';
       });
       document.querySelectorAll('.top-title h4').forEach((i)=>{
         i.style.color = '#fff9f0';
@@ -410,13 +412,12 @@ const observer = new IntersectionObserver((entries) => {
     } else {
       document.querySelector('body').style.background = '#fffdf5';
       document.querySelector('.top-fixed').style.background = 'white';
+      document.querySelector('.rwdbtn').style.boxShadow = '0px -1px 0px #282f40, 0px -8px 0px #282f40, 0px -15px 0px #282f40';
+      document.querySelector('#myCursor').style.borderColor = '#a5a4a4';
       document.querySelectorAll('.fontendsize').forEach((i)=>{
         i.style.color = '#a5a4a4';
       });
       document.querySelectorAll('.about-box p').forEach((i)=>{
-        i.style.color = '#a5a4a4';
-      });
-      document.querySelectorAll('.top-link a').forEach((i)=>{
         i.style.color = '#a5a4a4';
       });
       document.querySelectorAll('.top-title h4').forEach((i)=>{
@@ -498,12 +499,29 @@ window.onload = function() {
   <!-- mouse -->
   <script>
     let cursor = document.getElementById("myCursor");
-
+    if (window.innerWidth >= 768) {
+      document.getElementById("myCursor").style.display ='block'
+    }else{
+      document.getElementById("myCursor").style.display ='none'
+    }
     window.addEventListener("mousemove",function(e){
-      let x = e.clientX;
-      let y = e.clientY;
-      cursor.style.left = x-27+"px";
-      cursor.style.top = y-27+"px";
+        let x = e.clientX;
+        let y = e.clientY;
+        cursor.style.left = x-27+"px";
+        cursor.style.top = y-27+"px";
     })
+  </script>
+  <!-- rwdnavbar -->
+  <script>
+
+    document.querySelector('.navbar-btn').addEventListener('click', function() {
+        // 获取 #rwdbtn 元素
+        let rwdbtn = document.getElementById('rwdbtn');
+        
+        // 如果 #rwdbtn 是选中状态，则取消选中状态；否则不做任何操作
+        if (rwdbtn.checked) {
+            rwdbtn.checked = false;
+        }
+    });
   </script>
 </html>
