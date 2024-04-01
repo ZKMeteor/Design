@@ -293,8 +293,7 @@ h5,h4,h3,h2,h1,p,a {
 .about-title {
     font-weight: 400;
     opacity: 0;
-  }
-  
+}
 .about-title.is-inview{
     opacity: 1;
 }
@@ -307,8 +306,6 @@ h5,h4,h3,h2,h1,p,a {
 
 .about-box p.is-inview{
     opacity: 1;
-}
-.about-imgbox {
 }
 @media screen and (max-width:768px) {
     .about-imgbox {
