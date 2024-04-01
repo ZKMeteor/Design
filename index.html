@@ -381,6 +381,10 @@ const observer = new IntersectionObserver((entries) => {
       document.querySelectorAll('.fontendsize').forEach((i)=>{
         i.style.color = '#fff9f0';
       });
+      document.querySelectorAll('.top-link a').forEach((i)=>{
+        i.style.color = '#fff9f0';
+        i.style.transition = '0.5s';
+      });
       document.querySelectorAll('.about-box p').forEach((i)=>{
         i.style.color = '#fff9f0';
       });
@@ -415,6 +419,9 @@ const observer = new IntersectionObserver((entries) => {
       document.querySelector('.rwdbtn').style.boxShadow = '0px -1px 0px #282f40, 0px -8px 0px #282f40, 0px -15px 0px #282f40';
       document.querySelector('#myCursor').style.borderColor = '#a5a4a4';
       document.querySelectorAll('.fontendsize').forEach((i)=>{
+        i.style.color = '#a5a4a4';
+      });
+      document.querySelectorAll('.top-link a').forEach((i)=>{
         i.style.color = '#a5a4a4';
       });
       document.querySelectorAll('.about-box p').forEach((i)=>{
