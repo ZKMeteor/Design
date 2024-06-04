@@ -48,6 +48,21 @@ h5,h4,h3,h2,h1,p,a {
     background: gray;
 }
 
+@keyframes fontup {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    50% {
+       opacity: 1;
+       transform: translateY(25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+  }
+
 /* changeclass */
 
 .changed {
@@ -371,12 +386,10 @@ h5,h4,h3,h2,h1,p,a {
     color: #282f40;
     font-size: 3rem;
     opacity: 0;
-    transform: translateY(-20px);
 }
 .project-box a.is-inview{
-    opacity: 1;
-    transform: translateY(0px);
-    transition: .5s ease;
+    animation: fontup 1s linear ;
+    animation-fill-mode: forwards; /*呈現動畫結束樣式*/
 }
 .proj-imgbox {
     position: relative;
@@ -420,6 +433,32 @@ opacity: 1;
     opacity: 1;
     transition-duration: .5s;
 }
+
+/* notebox */
+.notebox{
+    display: flex;
+    align-items: flex-end;
+    height: 40vh;
+}
+@media screen and (max-width:768px) {
+    .notebox{
+        height: auto;
+    }
+}
+.notebox a {
+    text-align: right;
+    display: block;
+    font-size: 3em;
+    color: #a5a4a4;
+    font-weight: 700;
+    opacity: 0;
+}
+
+.notebox a.is-inview {
+    animation: fontup 0.5s linear ;
+    animation-fill-mode: forwards; /*呈現動畫結束樣式*/
+}
+  
 
 /* ccontact */
 .contact-box p,.contact-box span,.contact-box a{
