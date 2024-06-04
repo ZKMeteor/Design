@@ -353,6 +353,7 @@ h5,h4,h3,h2,h1,p,a {
     font-weight: 600;
     font-size: 4rem;
     line-height: 1;
+    transition: none !important;
 }
 
 /* project */
@@ -393,9 +394,6 @@ h5,h4,h3,h2,h1,p,a {
 }
 .proj-imgbox {
     position: relative;
-}
-.about-year {
-    position: sticky;
 }
 .proj-imgbox img {
     box-shadow: 4px 4px 5px 2px gray;
