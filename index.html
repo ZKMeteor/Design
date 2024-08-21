@@ -71,9 +71,6 @@
     <div class="container-fluid p-0" >
       <div class="container" id="fontend" data-scroll-id="#fontend"
         style="height: 100px;">
-        <div class="col-6"
-        style="border-right: 1px solid #a5a4a4; height: 70px;"></div>
-        <div class="col-6"></div>
       </div>
       <!-- fontend -->
       <div class="container-md container-fluild fontend-box py-3">
@@ -458,7 +455,8 @@ const observer = new IntersectionObserver((entries) => {
     if (!entry.isIntersecting) {
       document.querySelector('body').style.background = '#282f40';
       document.querySelector('.top-fixed').style.background = '#282f40';
-      document.querySelector('.rwdbtn').style.boxShadow = '0px -1px 0px rgb(255, 255, 255), 0px -8px 0px white, 0px -15px 0px white';
+      document.querySelector('.rwdbtn').style.boxShadow = '0px 7px 0px white, 0px 0px 0px white, 0px -7px 0px white';
+      document.querySelector('.rwdbtn').style.background = 'white';
       document.querySelector('#myCursor').style.borderColor = '#d9d9d9';
       document.querySelector('.navbar-btn').style.background = '#282f40';
       document.querySelectorAll('.fontendsize').forEach((i)=>{
@@ -498,7 +496,8 @@ const observer = new IntersectionObserver((entries) => {
     } else {
       document.querySelector('body').style.background = '#fffdf5';
       document.querySelector('.top-fixed').style.background = '#fffdf5';
-      document.querySelector('.rwdbtn').style.boxShadow = '0px -1px 0px #282f40, 0px -8px 0px #282f40, 0px -15px 0px #282f40';
+      document.querySelector('.rwdbtn').style.boxShadow = '0px 7px 0px #a5a4a4, 0px 0px 0px #a5a4a4, 0px -7px 0px #a5a4a4';
+      document.querySelector('.rwdbtn').style.background = '#a5a4a4';
       document.querySelector('#myCursor').style.borderColor = '#a5a4a4';
       document.querySelector('.navbar-btn').style.background = '#fffdf5';
       document.querySelectorAll('.fontendsize').forEach((i)=>{
