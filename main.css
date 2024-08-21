@@ -136,7 +136,7 @@ h5,h4,h3,h2,h1,p,a {
     position: relative;
     top: 0;right: 0;
     z-index: 500;
-    background: white;
+    background: #fffdf5;
 }
 .rwdbtnbox {
     display: none;
@@ -147,7 +147,7 @@ h5,h4,h3,h2,h1,p,a {
         position: fixed;
         top: 0;right: 0;
         z-index: 500;
-        background: white;
+        background: #fffdf5;
     }
     .rwdbtnbox {
         display: block;
@@ -228,9 +228,9 @@ h5,h4,h3,h2,h1,p,a {
     height: calc(75vh - 60px);
 }
 @media screen and (max-width:768px) {
-    .top-box {
+/*     .top-box {
         height: 80px;
-    }
+    } */
     .carousel-item img{
         height: calc(40vh - 60px);
     }
