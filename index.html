@@ -436,6 +436,7 @@ document.querySelector('.footer').innerHTML = `<p class="text-center m-0 py-2 co
         const slowscroll = new LocomotiveScroll({
           el: document.querySelector('.body'), // 滾動效果的作用範圍，整個網站都要滑順的話，直接設定 “body”
           smooth: true,
+          smoothMobile: true, // 啟用手機平滑滾動
           repeat: true,
           lerp: 0.05,
         })
