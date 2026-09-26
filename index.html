@@ -12,8 +12,8 @@
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">    <!-- img -->
-    <!-- <link rel="stylesheet" href="/model/owl.carousel.min.css"/> -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="model/owl.carousel.min.css"/>
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css" integrity="sha512-NVt7pmp5f+3eWRPO1h4A1gCf4opn4r5z2wS1mi7AaVcTzE9wDJ6RzMqSygjDzYHLp+mAJ2/qzXXDHar6IQwddQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <!-- aos -->
     <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
@@ -31,7 +31,7 @@
 <!-- LOAD -->
 <body class="">
 <div id="myCursor"></div>
-<div class="body" id="home">
+<div class="body" id="home" data-scroll-container>
   <!-- top -->
   <!-- <div class="" style="height: 60px;"></div> -->
     <div class="top-fixed" data-scroll data-scroll-sticky data-scroll-target=".body" data-scroll-offset="0">
@@ -174,7 +174,7 @@
             </div>
             <div class="row project-box py-4"  data-scroll>
               <div class="col-md-3 d-flex align-items-end"><p style="font-family: Playfair Display, serif;font-size: 1.5em;"data-scroll data-scroll-offset="300">Design</p></div>
-              <div class="col-md-6 proj-imgbox"><a target="_blank" data-scroll data-scroll-offset="300" href="./assets/namepost.jpg">Poster</a></div>
+              <div class="col-md-6 proj-imgbox"><a href="#poster" id="posterOpen" data-scroll data-scroll-offset="300">Poster</a></div>
               <div class="col-md-3 d-flex align-items-end"><p style="font-family: Playfair Display, serif;font-size: 1.5em;"data-scroll data-scroll-offset="300">Poster Derivative work</p></div>
               <div class="col-12 proj-line my-2" data-scroll data-scroll-offset="100"></div>
             </div>
@@ -417,6 +417,37 @@
       </div>
     </div>
   </div>
+<div class="poster-modal" id="posterModal" aria-hidden="true">
+  <button type="button" class="poster-modal-close" id="posterClose" aria-label="Close">&times;</button>
+  <div class="poster-modal-inner">
+    <div class="owl-carousel owl-theme poster-carousel">
+      <div class="item">
+        <img src="./assets/namepost.jpg" alt="Your Name Post">
+        <p>Your Name Post</p>
+      </div>
+      <div class="item">
+        <img src="./assets/ERP.jpg" alt="ERP Post">
+        <p>ERP Post</p>
+      </div>
+      <div class="item">
+        <img src="./assets/risk.jpg" alt="Digital Risk Post">
+        <p>Digital Risk Post</p>
+      </div>
+      <div class="item">
+        <img src="./assets/HB.jpg" alt="Handbook">
+        <p>Handbook</p>
+      </div>
+      <div class="item">
+        <img src="./assets/greenhouse.jpg" alt="Green House Post">
+        <p>Green House Post</p>
+      </div>
+      <div class="item">
+        <img src="./assets/dm.jpg" alt="Name Card">
+        <p>Name Card</p>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- all -->
 <script>
 year = new Date().getFullYear();
@@ -433,21 +464,30 @@ document.querySelector('.footer').innerHTML = `<p class="text-center m-0 py-2 co
 <script>
 
     window.addEventListener('load', function() {
-        const slowscroll = new LocomotiveScroll({
-          el: document.querySelector('.body'), // 滾動效果的作用範圍，整個網站都要滑順的話，直接設定 “body”
+        const slowscroll = window.slowscroll = new LocomotiveScroll({
+          el: document.querySelector('[data-scroll-container]'),
           smooth: true,
-          smoothMobile: true, // 啟用手機平滑滾動
           repeat: true,
           lerp: 0.05,
-        })
+          reloadOnContextChange: true,
+          smartphone: {
+            smooth: true
+          },
+          tablet: {
+            smooth: true
+          }
+        });
         let links = document.querySelectorAll('.top-link a');
         links.forEach(function(link) {
             link.addEventListener('click', function(e) {
-                e.preventDefault(); // 防止點擊連結時瀏覽器跳轉到指定的 URL
-                let targetId = this.getAttribute('href').substring(1); // 取得目標 ID
-                let targetElement = document.getElementById(targetId); // 取得目標元素
+                e.preventDefault();
+                let targetId = this.getAttribute('href').substring(1);
+                let targetElement = document.getElementById(targetId);
                 slowscroll.scrollTo(targetElement);
             });
+        });
+        window.addEventListener('resize', function() {
+            slowscroll.update();
         });
       });
 
@@ -574,63 +614,61 @@ window.onload = function() {
 };
 </script>
   <!-- img -->
-<!--   <script src="/model/jquery.js"></script>
-  <script src="/model/owl.carousel.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js" integrity="sha512-7KzSt4AJ9bLchXCRllnyYUDjfhO2IFEWSa+a5/3kPGQbr+swRTorHQfyADAhSlVHCs1bpFdB1447ZRzFyiiXsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
- -->  <script>
+  <script src="model/jquery.js"></script>
+  <script src="model/owl.carousel.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const posterModal = document.getElementById("posterModal");
+      const posterOpen = document.getElementById("posterOpen");
+      const posterClose = document.getElementById("posterClose");
+      let posterOwlReady = false;
 
-document.addEventListener("DOMContentLoaded", function() {
-  
-    /* $('.owl-carousel').owlCarousel({
-        animateOut: 'slideOutDown', //可以使用animate.css套件合作使用
-        animateIn: 'flipInX',
-        autoplay:true,            //自動播放
-        autoplayTimeout:1000,
-        autoplayHoverPause:true,  // hover時停止自動撥放
-        autoHeight:true,
-        URLhashListener:true,  //啟用a標籤跳轉
-        startPosition: 'URLHash',
-        loop:true, //是否重複
-        margin:10,
-        nav:false,//方向箭
-        center: true,//致中
-        stagePadding: 50,//左右填滿
-        rtl: false, //右至左
-        responsive:{
-            0:{
-                items:1,
-                nav:true
-            },
-            600:{
-                items:3,
-                nav:false
-            },
-            1000:{
-                items:5,
-                nav:false,
-                loop:false
-            }
+      function openPosterModal(e) {
+        e.preventDefault();
+        posterModal.classList.add("is-open");
+        posterModal.setAttribute("aria-hidden", "false");
+        if (window.slowscroll) {
+          window.slowscroll.stop();
         }
-    }) */
-  
-    /* baguetteBox.run('.owl-carousel', {
-      animation: 'fadeIn',
-      noScrollbars: true
-    }); */
-});
-
-
-
-    /* const projImgBoxes = document.querySelectorAll('.owl-carousel');
-
-    projImgBoxes.forEach(function(projImgBox) {
-        projImgBox.addEventListener('click', function() {
-            this.style.transform = 'none';
+        window.requestAnimationFrame(function() {
+          if (!posterOwlReady) {
+            $(".poster-carousel").owlCarousel({
+              items: 1,
+              loop: true,
+              nav: true,
+              dots: true,
+              margin: 10,
+              autoHeight: true,
+              navText: ["‹", "›"]
+            });
+            posterOwlReady = true;
+          } else {
+            $(".poster-carousel").trigger("refresh.owl.carousel");
+          }
         });
-    }); */
+      }
 
+      function closePosterModal() {
+        posterModal.classList.remove("is-open");
+        posterModal.setAttribute("aria-hidden", "true");
+        if (window.slowscroll) {
+          window.slowscroll.start();
+        }
+      }
 
-
+      posterOpen.addEventListener("click", openPosterModal);
+      posterClose.addEventListener("click", closePosterModal);
+      posterModal.addEventListener("click", function(e) {
+        if (e.target === posterModal) {
+          closePosterModal();
+        }
+      });
+      document.addEventListener("keydown", function(e) {
+        if (e.key === "Escape" && posterModal.classList.contains("is-open")) {
+          closePosterModal();
+        }
+      });
+    });
   </script>
   <!-- bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
